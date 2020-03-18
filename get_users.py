@@ -40,7 +40,7 @@ async def on_message(message):
     			await message.channel.send("$" + volatile_df["money"][x])
 
 
-client.run('Njg5NTI5NjE1NDgzNTM1Mzgw.XnENNg.GacGef_PERwoYcE-pfRThWFwrhU')
+client.run('token')
 
 user_db = {"users": [], "weeb": [], "untouchable": [], "homeless": [], "impovrished": [], "lower-mid": [], "mid": [], "upper-mid": [], "rich": [], "one_perc": [], "bezos": [], "leader_fw": [], 
 			"money": [], "business_owner": [], "business_name": []}
