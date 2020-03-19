@@ -8,7 +8,7 @@ from get_users import create_db
 counter = 0
 mem = []
 try:
-	volatile_df = pd.read_csv("E:/PythonScripts/bizbot-master/bizbot-master/dataMainFixed.csv")
+	volatile_df = pd.read_csv("path")
 except FileNotFoundError:
 	print("Not set yet!")
 
@@ -62,7 +62,7 @@ async def on_message(message):
 @client.listen()
 async def on_message(message):
 	if message.content == "!import_database":
-		volatile_df = pd.read_csv("E:/PythonScripts/bizbot-master/bizbot-master/dataMainFixed.csv")
+		volatile_df = pd.read_csv("path")
 		await message.channel.send("Data imported! All functions usable.")
 
 
@@ -84,7 +84,7 @@ async def on_message(message):
 		auth = str(message.author.id)
 		if counter == 5:
 			counter = 0
-			volatile_df.to_csv("E:/PythonScripts/bizbot-master/bizbot-master/dataMainFixed.csv")
+			volatile_df.to_csv("path")
 		for x in range(len(volatile_df["users"])):
 			if auth == str(volatile_df["users"][x]):
 				volatile_df['money'][x] += random.randint(20, 40)
