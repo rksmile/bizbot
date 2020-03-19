@@ -26,6 +26,6 @@ def create_db(members_list):
 	
 		user_df = pd.DataFrame(user_db, columns=["users", "weeb", "untouchable", "homeless", "impovrished", "lower-mid", "mid", "upper-mid", "rich", "one_perc", "bezos", "leader_fw", "money", "business_owner", "business_name"])
 
-		user_df.to_csv("E:/PythonScripts/bizbot-master/bizbot-master/dataMain.csv")
+		user_df.to_csv("path")
 
 
